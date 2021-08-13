@@ -104,7 +104,6 @@ function changeImgSrc(evt) {
   onLightboxImg.src = bigPicture;
 
   openModal()
-
 }
 
 function openModal() {
@@ -114,4 +113,5 @@ function openModal() {
 function closeModal() {
   const openModal = document.querySelector('.is-open');
   openModal.classList.remove('is-open');
+  onLightboxImg.src = null
 }
