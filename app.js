@@ -113,5 +113,6 @@ function openModal() {
 function closeModal() {
   const openModal = document.querySelector('.is-open');
   openModal.classList.remove('is-open');
-  onLightboxImg.src = null
+  onLightboxImg.src = '#'
 }
+ 
