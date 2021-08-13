@@ -80,7 +80,7 @@ function makeGallery(galleryItems) {
     <li class="gallery__item">
   <a
     class="gallery__link"
-    href="#"
+    href="${original}"
   >
     <img
       class="gallery__image"
@@ -98,19 +98,20 @@ function changeImgSrc(evt) {
   if (evt.target.nodeName !== 'IMG') {
     return
   }
+  evt.preventDefault();
 
   const bigPicture = evt.target.dataset.source;
   onLightboxImg.src = bigPicture;
 
   openModal()
-  evt.stopPropagation()
+
 }
 
 function openModal() {
-    onModal.classList.add('is-open')
+  onModal.classList.add('is-open');
   }
 
 function closeModal() {
-const openModal = document.querySelector('.is-open')
-  openModal.classList.remove('is-open')
+  const openModal = document.querySelector('.is-open');
+  openModal.classList.remove('is-open');
 }
